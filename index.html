@@ -14,46 +14,61 @@
 
 <body>
 
-    <header>
-        <div>
-            <div>
-                <div>
+    <header class="jumbotron">
+        <div class="container">   <!-- header's container which has 1 row -->
+            <div class="row">     <!-- This row contains 2divs -->
+                <div class="col-12 col-sm-6"> 
+                    <!-- for extra-small-screens : content should occupy all 12 cols --> 
+                    <!-- for small to XL-screens : content should occupy only first 6 cols --> 
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div>
+                
+                <div class="col-12 col-sm">
+                <!-- for extra-small-screens : content should occupy all 12 cols of next line and will be below the previous div, since first 12 cols are occupied by previous div --> 
+                <!-- for small to XL-screens : cols will be occupied according to the content from the remaining 6 cols, since first 6cols are already occupied by the previous div -->
                 </div>
             </div>
         </div>
     </header>
-
-    <div>
-        <div>
-            <div>
+    
+    <div class="container">   <!-- body's container which has 3 rows -->
+        <!-- body's 1st row -->
+        <div class="row">    <!-- This row contains 2divs -->
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">   <!-- 1st Div -->
+                <!-- for extra-small-screens : content should occupy all 12 cols --> 
+                <!-- for small-screens : content should occupy only 4 cols -->
+                <!-- for medium to XL-screens : content should occupy only 3 cols --> 
+                <!-- order-sm-last : for small to XL screens: this cotent will be pulled to right side of the screen -->
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
-            <div>
+            <div class="col col-sm order-sm-first col-md">   <!-- 2nd Div -->
+                <!-- for extra-small-screens : content should occupy next cols, since all 12cols of the row are occupied by previous div --> 
+                <!-- for small-screens : content should occupy remaining 8 cols, since first 4 cols are already occupied by previous div -->
+                <!-- for medium to XL-screens : content should occupy remaining 9 cols --> 
+                <!-- order-sm-first : for small to XL screens: this cotent will be pulled to left side of the screen -->
                 <h2>Uthappizza</h2>
                 <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
             </div>
         </div>
 
-
-        <div>
-            <div>
+        <!-- body's 2nd row -->
+        <div class="row">  <!-- This row contains 2divs -->
+            <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
-            <div>
+            <div class="col col-sm col-md">
                 <h2>Weekend Grand Buffet</h2>
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
             </div>
         </div>
-
-        <div>
-            <div>
+        
+        <!-- body's 3rd row -->
+        <div class="row">  <!-- This row contains 2divs -->
+            <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
-            <div>
+            <div class="col col-sm order-sm-first col-md">
                 <h2>Alberto Somayya</h2>
                 <h4>Executive Chef</h4>
                 <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
@@ -62,9 +77,13 @@
     </div>
 
     <footer>
-        <div>
-            <div>             
-                <div>
+        <div class="container">    <!-- footer's container which has 2 rows -->
+            <!-- footer's 1st row -->
+            <div class="row">             <!-- This row contains 3divs -->
+                <div class="col-4 offset-1 col-sm-2">   <!-- 1st Div -->
+                    <!-- for extra-small-screens : content should occupy first 4 cols --> 
+                    <!-- for small to XL-screens : content should occupy first 2 cols -->
+                     <!--offset-1 : for all screens: this div-content will be pushed right by 1col  -->
                     <h5>Links</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -73,7 +92,7 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-7 col-sm-5">    <!-- 2nd Div -->
                     <h5>Our Address</h5>
                     <address>
 		              121, Clear Water Bay Road<br>
@@ -84,7 +103,7 @@
 		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
-                <div>
+                <div class="col-12 col-sm-4">         <!-- 3rd Div -->
                     <div>
                         <a href="http://google.com/+">Google+</a>
                         <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
@@ -95,8 +114,11 @@
                     </div>
                 </div>
            </div>
-           <div>             
-                <div>
+           
+           <!-- footer's 2nd row -->
+           <div class="row">             
+                <div class="col-auto">
+                    <!-- occupy cols according to the requirement of the content -->
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
                 </div>
            </div>
