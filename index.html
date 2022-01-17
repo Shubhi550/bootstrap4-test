@@ -8,6 +8,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS  -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">  <!-- adding css file from css folder -->
 
     <title>Ristorante Con Fusion</title>
 </head>
@@ -16,8 +17,9 @@
 
     <header class="jumbotron">
         <div class="container">   <!-- header's container which has 1 row -->
-            <div class="row">     <!-- This row contains 2divs -->
-                <div class="col-12 col-sm-6"> 
+            <div class="row row-header">     <!-- This row contains 2divs -->
+                <!-- row is a built-in bootstrap class while row-header is a class defined by us in css/styles.css -->
+                <div class="col-12 col-sm-6">   <!-- multiple-classes can be applied by seperating the classes wih a space -->
                     <!-- for extra-small-screens : content should occupy all 12 cols --> 
                     <!-- for small to XL-screens : content should occupy only first 6 cols --> 
                     <h1>Ristorante con Fusion</h1>
@@ -34,7 +36,8 @@
     
     <div class="container">   <!-- body's container which has 3 rows -->
         <!-- body's 1st row -->
-        <div class="row">    <!-- This row contains 2divs -->
+        <div class="row row-content align-items-center">    <!-- This row contains 2divs -->
+            <!-- align-items-center: vertically-centering the content in that row -->
             <div class="col-12 col-sm-4 order-sm-last col-md-3">   <!-- 1st Div -->
                 <!-- for extra-small-screens : content should occupy all 12 cols --> 
                 <!-- for small-screens : content should occupy only 4 cols -->
@@ -53,7 +56,7 @@
         </div>
 
         <!-- body's 2nd row -->
-        <div class="row">  <!-- This row contains 2divs -->
+        <div class="row row-content align-items-center">  <!-- This row contains 2divs -->
             <div class="col-12 col-sm-4 col-md-3">
                 <h3>This Month's Promotions</h3>
             </div>
@@ -64,7 +67,7 @@
         </div>
         
         <!-- body's 3rd row -->
-        <div class="row">  <!-- This row contains 2divs -->
+        <div class="row row-content align-items-center">  <!-- This row contains 2divs -->
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Meet our Culinary Specialists</h3>
             </div>
@@ -76,7 +79,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
         <div class="container">    <!-- footer's container which has 2 rows -->
             <!-- footer's 1st row -->
             <div class="row">             <!-- This row contains 3divs -->
@@ -85,7 +88,8 @@
                     <!-- for small to XL-screens : content should occupy first 2 cols -->
                      <!--offset-1 : for all screens: this div-content will be pushed right by 1col  -->
                     <h5>Links</h5>
-                    <ul>
+                    <ul class="list-unstyled">
+                        <!-- class="list-unstyled" removes bullet points from the list -->
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Menu</a></li>
@@ -103,8 +107,9 @@
 		              Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
 		           </address>
                 </div>
-                <div class="col-12 col-sm-4">         <!-- 3rd Div -->
-                    <div>
+                <div class="col-12 col-sm-4 align-self-center">         <!-- 3rd Div -->
+                    <!-- align-self-center: should be applied for div that uses cols, the cols contents are aligned vertically to the center of the row -->
+                    <div class="text-center">
                         <a href="http://google.com/+">Google+</a>
                         <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
                         <a href="http://www.linkedin.com/in/">LinkedIn</a>
@@ -116,7 +121,8 @@
            </div>
            
            <!-- footer's 2nd row -->
-           <div class="row">             
+           <div class="row justify-content-center"> 
+                <!--justify-content-center :horizontally-centering the content in that row -->
                 <div class="col-auto">
                     <!-- occupy cols according to the requirement of the content -->
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
